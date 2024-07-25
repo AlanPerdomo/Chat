@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:chat/components/messages.dart';
 import 'package:chat/components/new_message.dart';
+import 'package:chat/core/models/chat_notification.dart';
 import 'package:chat/core/services/auth/auth_service.dart';
 import 'package:chat/core/services/notification/push_notification_service.dart';
 import 'package:chat/pages/notification_page.dart';
@@ -59,7 +62,7 @@ class ChatPage extends StatelessWidget {
                   foregroundColor: Colors.white,
                   child: Text(
                     '${Provider.of<ChatNotificationService>(context).itemsCount}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 12,
                     ),
                   ),

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "630727734702",
+    "project_id": "chat-4df20",
+    "storage_bucket": "chat-4df20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630727734702:android:ef82b5dc5357473d1b443f",
+        "android_client_info": {
+          "package_name": "com.alanperdomo.chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwKhQv6yKX724nbIVmW5Ja1xTcdLvXTGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
