@@ -13,15 +13,18 @@ class AuthPage extends StatefulWidget {
 class _AuthPageState extends State<AuthPage> {
   bool _isLoading = false;
 
-  void _handleSubmit(AuthFormData formData) async {
+  Future<void> _handleSubmit(AuthFormData formData) async {
     try {
       setState(() => _isLoading = true);
+
       if (formData.isLogin) {
+        // Login
         await AuthService().login(
           formData.email,
           formData.password,
         );
       } else {
+        // Signup
         await AuthService().signup(
           formData.name,
           formData.email,
@@ -30,7 +33,7 @@ class _AuthPageState extends State<AuthPage> {
         );
       }
     } catch (error) {
-      //erro
+      // Tratar erro!
     } finally {
       setState(() => _isLoading = false);
     }
@@ -49,7 +52,9 @@ class _AuthPageState extends State<AuthPage> {
           ),
           if (_isLoading)
             Container(
-              decoration: const BoxDecoration(color: Colors.black45),
+              decoration: const BoxDecoration(
+                color: Color.fromRGBO(0, 0, 0, 0.5),
+              ),
               child: const Center(
                 child: CircularProgressIndicator(),
               ),
