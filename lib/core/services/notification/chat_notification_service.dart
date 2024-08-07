@@ -62,7 +62,6 @@ class ChatNotificationService with ChangeNotifier {
     add(ChatNotification(
       title: msg.notification!.title ?? 'Não informado!',
       body: msg.notification!.body ?? 'Não informado!',
-      payload: '',
     ));
   }
 }
